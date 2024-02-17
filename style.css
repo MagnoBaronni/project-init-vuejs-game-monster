@@ -1,0 +1,142 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+.ring{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: #fff;
+    box-shadow: 2px 2px 2px 2px #8888;
+    margin-bottom: 1.8rem !important;
+    margin: 10px 10px;
+}
+
+.gamer, .monster {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.98rem;
+}
+.gamer{
+    background-color:  rgb(99, 156, 241);
+}
+.monster{
+    background-color: rgb(245, 130, 149);
+}
+
+.barra-progresso{
+	height:20px;
+	width: 98%;
+	border: 0.12rem solid #000;
+    border-radius: 0.8rem;
+}
+.barra-progresso .progresso {
+    display: flex;
+    justify-content: center;
+    background: rgb(42, 227, 42);
+    height: 100%;
+    border-radius: 0.8rem;
+}  
+
+.barra-progresso .lifdanger{
+   background: red;
+   border-radius: 0.8rem;
+}
+h1{
+    font-size: 1.98rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+.life{
+    font-size: 1.12rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+.result{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+.win{
+    
+    color: rgb(42, 227, 42);
+}
+.lose{
+   
+    color: red;
+}
+/*---------------------------------------------*/
+.controles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    box-shadow: 2px 2px 2px 2px #8888;
+    margin: 10px 10px;
+}
+
+.ataque, .atq-especial, .cura, .desistir, .start-game{
+   margin: 0.6rem;
+   padding: 0.7rem;
+   border-radius: 0.288rem;
+   border: none;
+   font-size: 1.1rem;
+   font-weight: 520;
+   cursor: pointer;
+}
+.start-game{
+    background: rgb(21, 21, 237);
+    color: #fff;
+}
+.ataque{
+    background: red;
+    color: #fff;
+}
+.atq-especial{
+    background: orange;
+    color: #000;
+}
+.cura{
+background: green;
+color: #fff;
+}
+.desistir{
+    background: rgb(174, 174, 221);
+    color: #000;
+}
+/*---------------------------------------------*/
+.logs{
+    box-shadow: 2px 2px 2px 2px #8888;
+    margin: 10px 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+h1.luta, h1.luta1{
+    font-size: 1.1rem;
+    font-weight: 530;
+    padding: 0.532rem;
+    color: #fff;
+}
+.luta{
+    text-align: center;
+    background: rgba(245, 130, 149, 0.7);
+    margin-bottom: 0.58rem;
+}
+.luta1{
+    text-align: center;
+    background: rgba(99, 156, 241, 0.7);
+    margin-bottom: 0.58rem;
+}
+.descript{
+    margin: 1rem;
+}

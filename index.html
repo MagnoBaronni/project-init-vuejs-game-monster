@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">
+    <script src="https://unpkg.com/vue@2"></script>
+    <title>Matador de Monstro</title>
+</head>
+<body>
+    <div id="desafio">
+<section>
+    <div class="ring ">
+        <div class="gamer">
+            <h1>Jogador</h1>
+             <div class="barra-progresso">
+			    <div class="progresso" :style="{width:playerLife + '%'}" :class="{lifdanger:playerLife<20}"></div>
+		    </div>
+            <div class="life">{{playerLife}}%</div>
+        </div>
+        <div class="monster">
+               <h1>Monstro</h1>
+            <div class="barra-progresso">
+			    <div class="progresso":style="{width:monsterLife + '%'}":class="{lifdanger:monsterLife<20}"></div>
+		    </div>
+            <div class="life">{{monsterLife}}%</div>
+        </div>
+   </div>
+   <div class="panel result" v-if="hasResult">
+      <div class="win" v-if="monsterLife <= 0">Você ganhou!!! :)</div>
+      <div class="lose" v-else>Você perdeu! :(</div>
+   </div>
+</section>
+   
+    <section class="controles">
+        <div class="btn">
+            <button class="ataque" @click="attack(false)" v-if="console">ATAQUE</button>
+            <button class="atq-especial" @click="attack(true)" v-if="console">ATAQUE ESPECIAL</button>
+            <button class="cura" @click="healAnHurt()"v-if="console">CURA</button>
+           
+            <button class="desistir" @click="restart()"v-if="console" >DESISTIR</button>
+            
+            <button class="start-game" @click="iniciar()"v-if="!console">INICIAR NOVO JOGO</button>
+        </div>
+    </section>
+    
+    <section>
+        <div class="logs">
+            <div class="descript" v-if="logs.length">
+            <h1 v-for="log in logs" :class="log.cls" >{{log.text}}</h1>
+            <h1 ></h1>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
